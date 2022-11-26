@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/estilo1.css">
+    <!--<script defer src="/js/funcion.js"></script>-->
+    <title>Taller 1 Pseint</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <a href="#">Suyin</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#taller1">Taller 1</a></li>
+                    <li><a href="#taller2">Taller 2</a></li>
+                    <li><a href="#taller3">Taller 3</a></li>
+                    <li><a href="#taller4">Taller 4</a></li>
+                    <li><a href="#taller5">Taller 5</a></li>
+                    <li><a href="#video">Ver Video</a></li>
+                    <li><a href="pseint.html">ATRÁS</a></li>
+                    <li><a href="index.html">PAGINA PRINCIPAL</a></li>
+    
+    
+    
+    
+    
+                </ul>
+            </nav>
+    
+        </header>
+    
+    </div>
+
+    <section id="inicio" class="inicio">
+        <div class="contenido">
+            <h1>Taller Variables e Impresion</h1>
+    
+        </div>
+    
+    </section>
+
+    <section id="taller1" class="taller1">
+        <h2>Taller 1</h2>
+        <p>Realizar un programa el cual solicite su nombre y apellido</p>
+    <div class="container">
+        <div class="izquierdo">
+            <h3>Codigo</h3>
+            <pre>
+                <code class="code">
+                   
+                    Proceso MiPresentacion
+
+                        Definir nombre Como Caracter;
+                            
+                        nombre <- "Suyin Orihuen" ;
+            
+                        Escribir "Cual es tu nombre y apellido?"; 
+                        Leer nombre;
+            
+                    FinProceso
+            
+                </code>
+    
+            </pre>
+    
+    
+
+        </div>
+       
+    </div>
+
+    </section>
+    <section id="taller2" class="taller2">
+    <h2>Taller 2</h2>
+    <p>Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p>
+    <div class="container">
+        <div class="derecho">
+            <h3>Codigo</h3>
+            <pre>
+                <code class="contenido">
+                   Proceso MiCaracteristicas
+
+                    Definir nombre Como Caracter;
+                    Definir estatura Como Real;
+                    Definir edad Como Entero;
+        
+                    nombre <- "Suyin Orihuen";
+                    estatura <- 1.55;
+                    edad <- 36;
+        
+        
+                    Escribir " Cual es tu nombre y apellido ?";
+                    Leer nombre;
+            
+                    Escribir " Cual es tu estatura? ";
+                    Leer estatura;
+    
+                    Escribir " Que edad tienes? ";
+                    Leer edad;
+            
+                  FinProceso
+
+                   
+                
+                </code>
+    
+            </pre>
+    
+    
+
+        </div>
+       
+    </div>
+
+    </section>
+    <section id="taller3" class="taller3">
+        <h2>Taller 3</h2>
+        <p>Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir
+            en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].
+        </p>
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                      Proceso Parientes
+
+                        Definir nombre Como Caracter;
+                        Definir nombremama Como Caracter;
+                        Definir nombrepapa Como Caracter;
+                
+                        nombre <- "Suyin Orihuen";
+                        nombremama <- " Mirian Sorja ";
+                        nombrepapa <- " Pablo Orihuen ";
+                
+                        Escribir " Cual es tu nombre y apellido?";
+                        Leer nombre;
+                        Escribir  " Como se llama tu mama?";
+                        Leer nombremama;
+                        Escribir " Como se llama tu papa?"; -->
+                        Leer nombrepapa;
+                
+                        Limpiar Pantalla;
+                
+                        Escribir " Yo ", nombre;
+                        Escribir " Soy hija de ", nombremama;
+                        Escribir " y ", nombrepapa ; 
+        
+                     FinProceso
+                       
+                    </code>
+        
+                </pre>
+    
+            </div>
+           
+        </div>
+    
+    </section>
+    <section id="taller4" class="taller4">
+        <h2>Taller 4</h2>
+        <p>Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La
+            ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País].
+        </p>
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                        
+                      Proceso UnLugar
+
+                        Definir nombre_ciudad Como Caracter;
+                        Definir nombre_pais Como Caracter; 
+
+                        nombre_ciudad <- "Caracas";
+                        nombre_pais <- " Venezuela";
+
+                        Escribir " En que Ciudad Nacio? ";
+                        Leer nombre_ciudad;
+                
+                        Escribir " Cual es el Pais? ";
+                        Leer nombre_pais; 
+                
+                        Limpiar Pantalla;
+
+                        Escribir " La Ciudad de ", nombre_ciudad; 
+                        Escribir " es la Capital de ",nombre_pais;
+
+                      FinProceso
+                
+                       
+                    </code>
+        
+                </pre>
+    
+            </div>
+           
+        </div>
+    
+    </section>
+    <section id="taller5" class="taller5">
+        <h2>Taller 5</h2>
+        <p>Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: 
+            [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).
+        </p>
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                      Proceso Mascota
+                        Definir nombre Como Caracter;
+                        Definir edad Como Entero;
+                        Definir tipo Como Caracter;
+                        Definir dueno Como Caracter;
+                        
+                        nombre <- "Leon";
+                        edad <- 6;
+                        tipo <- "Perro";
+                        dueno <- "Suyin Orihuen" ;
+                        
+                        Escribir " Cual es el nombre de tu mascota?";
+                        Leer nombre;
+                        Escribir " Cual es su edad?";
+                        Leer edad;
+                        Escribir "Que tipo de animal es?";
+                        Leer tipo;
+                        Escribir "Quien es su dueño?";
+                        Leer dueno;
+                        
+                        Limpiar Pantalla;
+                        
+                        Escribir   nombre, " es un ", tipo;
+                        Escribir " Tiene ", edad, " años ";
+                        Escribir " Yo ", dueno, " soy su dueño " ;
+                        
+                      FinProceso
+                     
+                    </code>
+        
+                </pre>
+    
+            </div>
+           
+        </div>
+    
+    </section>
+    <section id="video" class="video">
+        <div class="titulo-video">
+            <h2>Video Variables</h2>
+        </div>
+        <video class="vid" width="500" height="500" controls>
+            <source src="/video/variables.mp4" type="video/mp4">
+        </video>
+
+    </section>
+    <!-- F O O T E R-->
+    <footer>
+        <h5> Creado por Suyin Orihuen</h5>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href=https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

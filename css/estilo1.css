@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Work Sans";
+    margin: 0;
+    padding: 0;
+}
+html{
+    /*deslizar*/
+    scroll-behavior: smooth;
+    font-family: "Righteous";
+}
+.contenedor{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor header .logo a{
+    font-family: "Righteous";
+    font-size: 36px;
+    color: #1CB698;
+    text-decoration: none;
+
+}
+.contenedor header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+
+}
+.contenedor header nav ul li a:hover{
+    color: #1CB698;
+}
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8),rgba(30,35,38,1)),
+    url(/img/imagen1.jpg);
+    background-size: cover;
+    height: 100vh;
+    color:#fff;
+    display:flex;
+    align-items: center;
+
+}
+.inicio .contenido{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin:auto;
+    text-align: center;
+    border-radius: 40px;
+
+}
+.inicio .contenido h1{
+    margin-top: 40px;
+    font-size: 40px;
+    font-family: "Righteous";
+    color:#1CB698
+
+}
+
+/* T A L L E R   1 */
+
+.taller1{
+    background-color:#1e2326;
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller1  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller1  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+   
+
+}
+
+.container{
+    max-width: 500px;
+    height: 500px;
+    background-color:darkgray;
+    border-radius: 30px 0px 0px 30px;
+    box-shadow: -4px 0px #0f0f0f;
+    padding: 20px;
+    margin:50px auto;
+    overflow-x: auto;
+   
+
+}
+.container::-webkit-scrollbar{
+    width: 5px;
+}
+.container::-webkit-scrollbar-thumb{
+    background: #9aa0a8;
+    border-radius: 10px;
+}
+/* T A L L E R 2*/
+.taller2{
+    background-color:rgb(78, 74, 74);
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller2  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller2  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+   
+
+}
+/* T A L L E R 3*/
+.taller3{
+    background-color:#1e2326;
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller3  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller3  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+
+}
+/* T A L L E R 4 */
+.taller4{
+    background-color:rgb(78, 74, 74);
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller4  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller4  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+
+}
+/* T A L L E R 5 */
+.taller5{
+    background-color:#1e2326;
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller5  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller5  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+
+}
+/* v i d e o */
+.video{
+    background-color:rgb(78, 74, 74);
+    text-align: center;
+ 
+}
+.titulo-video h2{
+  
+    font-family:"Righteous";
+     text-align: center;
+     font-size: 40px;
+     color: #1CB698;
+   
+}
+.vid{
+    position: relative;
+    margin:0;
+   
+}
+
+
+footer{
+    background-color:#252A2E;
+    color:#fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+
+}
+footer .redes{
+    margin-bottom: 20px;
+
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+
+}
+footer .redes a:hover{
+    color: #1CB698;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:-25px;
+    border-radius: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+.siguente{
+
+    display: flex;
+    float: right;
+    background-color:#1CB698;
+    color:#0f0f0f;
+    margin-right: 20px;
+    font-size: 15px;
+    font-family: "Righteous";
+
+}
+p{
+    font-family: "Righteous"; 
+}
+/* T A L L E R 6 */
+.taller6{
+    background-color:#1e2326;
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller6  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller6  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+
+}
+/* T A L L E R 7 */
+.taller7{
+    background-color:rgb(78, 74, 74);
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller7  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller7  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+
+}
+/* T A L L E R 8 */
+.taller8{
+    background-color:#1e2326;
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller8  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller8  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+
+}
+/* T A L L E R  9 */
+.taller9{
+    background-color:rgb(78, 74, 74);
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller9  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller9  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+
+}
+/* T A L L E R   10 */
+.taller10{
+    background-color:#1e2326;
+    color: #fff;
+    padding: 50px 20px;
+    height: auto;
+}
+.taller10  h2{
+    color: #1CB698;
+    font-family: "Righteous";
+    font-size: 40px;
+
+
+}
+.taller10  h3{
+    font-family: "Righteous";
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    color: #0f0f0f;
+}
+#h3{
+    margin-top: 10px;
+    color: #1CB698;
+    font-family: "Righteous";
+}
+
+
+
+
+
+

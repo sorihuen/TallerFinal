@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/estilo1.css">
+    <title>Ciclos parte II</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <a href="#">Suyin</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#taller6">Taller 6</a></li>
+                    <li><a href="#taller7">Taller 7</a></li>
+                    <li><a href="#taller8">Taller 8</a></li>
+                    <li><a href="#video">Ver Video</a></li>
+                    <li><a href="ciclos.html">ATRÁS</a></li>
+                    <li><a href="pseint.html">Pseint</a></li>
+                    <li><a href="index.html">PAGINA PRINCIPAL</a></li>
+
+
+
+
+
+                </ul>
+            </nav>
+
+        </header>
+
+    </div>
+    <section id="inicio" class="inicio">
+        <div class="contenido">
+            <h1>Taller Ciclos II</h1>
+            <p>Ejercicios 6 al 8..</p>
+
+
+        </div>
+
+    </section>
+    <section id="taller6" class="taller6">
+        <h2>Taller 6</h2>
+        <p>
+            Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos
+            telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y
+            organización.
+            Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado,
+            buscar contactos almacenados y eliminar contactos si el usuario lo requiere.
+            Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+        </p><br>
+
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Contactotelef
+                        Definir nombre1, nombre, n Como Caracter;
+                        Definir tlf1, tlf2, tlf3, rps, num, opc, opc2 Como Entero;
+                        Definir org Como Caracter;
+                        
+                        Escribir "****** Contactos Telefonicos ******";
+                        Escribir "";
+                        opc <- 0;
+
+                        Mientras (opc <> 3) Hacer
+                            
+                            Escribir "1. Crear contacto ";
+                            Escribir "2. Eliminar contacto"; 
+                            Escribir "3  Salir del sistema";
+                            
+                            Leer opc;	
+                            Segun opc Hacer
+                                1:
+                                    Escribir "Registre su nombre y apellido";
+                                    Leer nombre1;
+                                    
+                                    Escribir "Registre su numero de telefono";
+                                    Leer rps;
+                                    Escribir "Desea agregar otro numero";
+                                    Leer num;
+                                    Si rps = num Entonces
+                                        Escribir "Numero ya registrado";
+                                        Escribir "Ingrese otro numero";
+                                        Leer tlf2;
+                                    FinSi
+                                    
+                                    Escribir "Registar numero de casa";
+                                    Leer tlf3;
+                                    
+                                    Si num = tlf3 Entonces
+                                        Escribir "Numero ya registrado";
+                                        Escribir "Ingrese otro numero";
+                                        Leer tlf1;
+                                    FinSi
+                                    Escribir "Nombre de la Empresa";
+                                    Leer org;
+                                    
+                                2:
+                                    Escribir "Eliminar Contacto";
+                                    Escribir "Ingrese el nombre o el numero eliminar";
+                                    Leer nombre;
+                                    Si nombre = nombre  Entonces
+                                        Escribir "Contacto eliminado";
+                                        Escribir "======================";
+                                    FinSi
+                                3:
+                                    Escribir " ";
+                                    Escribir "Adios";
+                                    
+                                    
+                                De Otro Modo:
+                                    Escribir " Opcion Invalida";
+                                    
+                            FinSegun
+                        FinMientras
+
+	                FinProceso
+
+
+
+     
+          
+                </code>
+    
+            </pre>
+
+            </div>
+
+    </section>
+    <section id="taller7" class="taller7">
+        <h2>Taller 7</h2>
+        <p>
+            El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y
+            requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere
+            que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como
+            son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al
+            parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que
+            el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede
+            almacenar máximo 5 vehículos.
+        </p><br>
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Parqueadero
+                        Definir placa, opc, pl,i, a Como Entero;
+                        Definir nombre, tl, marca Como Caracter;
+                        Definir sal,hora  Como Real;
+                        opc <- 0;
+                        Escribir "*************** Parqueadero El Guardian *************";
+                        Escribir " ";
+                        Para i <-1 Hasta 5 Con Paso 1 Hacer
+                            Escribir "Registre el vehiculo";
+                            Escribir "Ingresar:";
+                            Escribir "Nombre del dueño";
+                            Leer nombre;
+                            Escribir "Numero de telefono";
+                            Leer tl;
+                            Escribir "Numero de placa";
+                            Leer placa;
+                            Escribir "Marca del vehiculo";
+                            Leer marca;
+                            
+                            Repetir
+                                Limpiar Pantalla;
+                                Escribir " Elija una opcion";
+                                Escribir "1. Ingresar al parqueadero";
+                                Escribir "2. Retirar del parqueadero";
+                                Escribir "3. Consultar vehiculo";
+                                Escribir "4. Salir";
+                                Leer opc;
+                                
+                                Segun opc Hacer
+                                    1:
+                                        Escribir "Hora de Ingreso";
+                                        Leer hora;
+                                        Escribir "Retire su tarjeta";
+                                        Escribir "Su Ingreso es ", hora;
+                                        Escribir " Puede ubicarse ";
+                                        Escribir" ==================";
+                                    2:
+                                        Limpiar Pantalla;
+                                        Escribir "Ingrese su tarjeta";
+                                        Escribir "Hora de salida";
+                                        Leer sal;
+                                        Escribir "listo puede retirar el vehiculo";
+                                        
+                                    3:
+                                        Limpiar Pantalla;
+                                        Escribir "Ingrese el numero de placa";
+                                        Leer pl;
+                                        Si pl = placa Entonces
+                                            Escribir " El vehiculo esta en el parqueadero";
+                                            Escribir "======================================";
+                                            Escribir " ";
+                                        SiNo
+                                            Escribir " No se encuentra en el registro";
+                                            Escribir "======================================";
+                                            Escribir " ";
+                                        FinSi
+                                        
+                                    4:
+                                    
+                                        Escribir "============ Adios ======================";
+                                    
+                                        
+                                    De Otro Modo:
+                                        Escribir "opcion invalida";
+                                        
+                                FinSegun
+                                Escribir "Presione enter para continuar";
+                                Esperar Tecla;
+		                    Hasta Que opc > 0 y opc < 5
+	                    FinPara
+                    FinProceso
+
+                 
+          
+                </code>
+    
+            </pre>
+
+            </div>
+
+    </section>
+    <section id="taller8" class="taller8">
+        <h2>Taller 8</h2>
+        <p>
+            La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los
+            cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de
+            adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso,
+            consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o
+            no). Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+            Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad
+        </p><br>
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso El_maestro
+ 
+                        Definir nombre, ide, edad, tlf, usuario, dir Como Caracter;
+                        Definir opcion, pr , i ,reg, incremento Como Entero;
+                        
+                        Escribir "===== Escuela Automovilistica =======";
+                        reg <-0;
+                        incremento <- 0;
+                        Repetir
+                            Escribir " 1. Registre sus datos";
+                            Escribir " 2. Consultar usuario";
+                            Escribir " 3. Salir del sistema";
+                            Leer opcion;
+                            Segun opcion Hacer
+                                1:
+                                    Para i <- 1 Hasta 8 Con Paso 1 Hacer
+                                        incremento <- incremento + 1;
+                                        Escribir "Usuario" , "(", incremento, ")";
+                                        Escribir "";
+                                        Escribir "Ingrese su nombre completo";
+                                        Leer nombre;
+                                        Escribir "Numero de identificacion";
+                                        Leer ide;
+                                        Escribir " Cuantos años tienes ";
+                                        Leer edad;
+                                        Escribir "Numero de Telefonico";
+                                        Leer tlf;
+                                        Escribir " Direccion";
+                                        Leer dir;
+                                        Escribir "========================";
+                                    FinPara
+				
+			 
+                                2:
+                                    Limpiar Pantalla;
+                                    Escribir "Consultar usuario";
+                                    Leer usuario;
+                                    Escribir "cantidad de preguntas aprobadas";
+                                    Leer pr;
+                                    Si pr >= 33 Entonces
+                                        Escribir usuario, " usted aprobo el curso";
+                                        Escribir "===================================";
+                                        Escribir "";
+                                    SiNo
+                                        Escribir usuario, " no aprobo el curso";
+                                        Escribir "===================================";
+                                        Escribir "";
+                                    FinSi
+                                3: 
+                                    Escribir "======= Adios =============";
+                                    
+                                    
+                            FinSegun
+		
+	                    Hasta Que opcion = 3
+	
+	
+                    FinProceso
+    
+                </code>
+    
+            </pre>
+
+            </div>
+
+    </section>
+    <section id="video" class="video">
+        <div class="titulo-video">
+            <h2>Video Ciclos</h2>
+        </div>
+        <video class="vid" width="500" height="500" controls>
+            <source src="/video/Pseint Ciclos.mp4" type="video/mp4">
+        </video>
+
+    </section>
+     <!-- F O O T E R-->
+     <footer>
+      
+        <h5> Creado por Suyin Orihuen</h5>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href=https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+
+
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

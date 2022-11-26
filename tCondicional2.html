@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/estilo1.css">
+    <title>Condicionales II</title>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <a href="#">Suyin</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#taller6">Taller 6</a></li>
+                    <li><a href="#taller7">Taller 7</a></li>
+                    <li><a href="#taller8">Taller 8</a></li>
+                    <li><a href="#taller9">Taller 9</a></li>
+                    <li><a href="#taller10">Taller 10</a></li>
+                    <li><a href="#video">Ver Video</a></li>
+                    <li><a href="tallerCondicional.html">ATRÁS</a></li>
+                    <li><a href="pseint.html">Pseint</a></li>
+                    <li><a href="index.html">PAGINA PRINCIPAL</a></li>
+
+
+
+
+
+                </ul>
+            </nav>
+
+        </header>
+
+    </div>
+    <section id="inicio" class="inicio">
+        <div class="contenido">
+            <h1>Taller Condicionales II</h1>
+            <p>Ejercicios 6 al 10..</p>
+
+        </div>
+
+    </section>
+    <section id="taller6" class="taller6">
+        <h2>Taller 6</h2>
+        <p>El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas
+            revisiones y requiere una aplicación que le permita registrar
+            los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y
+            las observaciones por parte del cliente. También debe existir registro de salida del taller con las
+            novedades y otra de arreglos hechos por el mecánico en caso de que
+            se requiera inventariar cambios repuestos en la motocicleta al entregarla.
+        </p>
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Taller_Motos
+                        Definir ing , nombre, model,mecanic  Como Caracter;
+                        Definir opcion Como Entero;
+                        Definir detalles, cliente Como Caracter;
+
+                        Escribir "======== El Maquinista ========";
+                        Escribir "";
+                        Escribir "Nombre y apellido del dueño";
+                        Leer nombre;
+                        Escribir "Fecha de ingreso";
+                        Leer ing;
+                        Escribir " Modelo de la Moto";
+                        Leer model;
+                        Escribir " Seleccione si desa realizar algunas de estas opciones";
+                        Escribir " 1. Pre-revision tecnomecanica";
+                        Escribir " 2. Alineacion y balanceo de rines";
+                        Escribir " 3. Mantenimiento y diagnóstico especializado ";
+                        Escribir " Si no es ninguna de las anteriores marque otro numero";
+                        leer opcion;
+
+                        Segun opcion Hacer
+                                    1:
+                                        Escribir " Pre-revision tecnomecanica";
+                                        Escribir " Agregue sus comentarios";
+                                        Leer cliente;
+                                    2:
+                                        Escribir " Alineacion y balanceo de rines";
+                                        Escribir " Agregue sus comentarios";
+                                        Leer cliente;
+                                    3:
+                                        Escribir " Mantenimiento y diagnóstico especializado ";
+                                        Escribir " Agregue sus comentarios";
+                                        Leer cliente;
+                                        
+                                    De Otro Modo:
+                                        
+                                        Escribir " Detalle los inconvenientes presentados";
+                                        Leer detalles;
+                                        
+                                FinSegun
+	
+                                Limpiar Pantalla;
+                                    
+                            Escribir " Agregar Comentarios Mecanico:";
+                            Leer mecanic;
+                            Escribir "Fecha de salida";
+                            Leer ing;
+                                    
+                    FinProceso
+                                                
+                </code>
+    
+            </pre>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller7" class="taller7">
+        <h2>Taller 7</h2>
+        <p>La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa
+            corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada
+            adicional a los datos suministrados,
+            debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso
+            y obeso).
+        </p>
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Corporal
+                        Definir peso , estatura , imc Como Real;
+                        Escribir  " Ingrese su Peso (Kg) ";
+                        Leer peso;
+                        Escribir " Ingrese su estatura en (Mts)";
+                        Leer estatura;
+	
+                        imc <- peso / (estatura * estatura);
+                        Escribir "Su IMC es de:", imc;
+
+	
+                        Si imc < 18.5 Entonces
+                            Escribir "Usted esta bajo de peso";
+                        SiNo
+                            Si imc >= 18.5 y imc <= 24.9 Entonces
+                                Escribir "Su IMC es normal";
+                            SiNo
+                                Si imc >= 25.0 y imc <= 30 Entonces
+                                    Escribir "Usted tiene sobrepeso";
+                                SiNo
+                                    
+                                    Escribir "Usted esta obeso";
+                                    
+                                FinSi
+                                
+                            FinSi
+                        FinSi
+                    FinProceso
+
+           
+                                                
+                </code>
+    
+            </pre>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller8" class="taller8">
+        <h2>Taller 8</h2>
+        <p>El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar
+            los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características
+            propias como sabor,
+            cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos,
+            las tortas disponibles y las ventas que se registren diariamente.
+        </p>
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Pasteleria
+                        Definir biz , pr, acum , x  Como Entero;
+                        Definir cho, fre , vai Como Entero;
+                        Definir bchoc, brf, bv, mon Como Entero;
+                        Definir cant, precio, total Como Real;
+                        Definir total1,total2,total3, total_ventas Como Real;
+                        
+                        
+                        cho <- 6000;
+                        fre <- 8000;
+                        vai <- 5000;
+                        acum<- 0;
+                        x <- 0;
+                        bchoc <- 0;
+                        brf <- 0;
+                        bv <- 0;
+                        mon <- 0;
+
+                        
+                        Escribir "========== Pasteleria Don Carlos ==========";
+                        Escribir "";
+                        Escribir "=========== Menu ===========";
+                        
+	
+                        Escribir "Seleccione su pedido";
+                        Escribir "1. Bizcocho de Chocolate..... ( porciones)";
+                        Escribir "Precio: $ 6000 ";
+                        Escribir "2. Bizcocho Relleno de Fresas.....( porciones)";
+                        Escribir "Precio: $ 8000 ";
+                        Escribir "3. Bizcocho de Vainilla....( porciones)";
+                        Escribir "Precio: $ 5000";
+                        Escribir "Seleccione una opcion";
+                        Leer biz;
+                        Segun biz Hacer
+                            1:
+                                Limpiar Pantalla;
+                                Escribir "Bizcocho de Chocolate..... ( $ 6000 por porcion)" ;
+                                Escribir "Cantidad de porciones";
+                                Leer pr;
+                                acum <- acum + cho * pr;
+                                Escribir " El total a pagar es ", acum;
+                                Escribir "Gracias por la compra";
+                                
+                            2:
+                                Limpiar Pantalla;
+                                Escribir "Bizcocho Relleno de Fresas.....($ 8000 por porcion)";
+                                Escribir "Cantidad de porciones";
+                                Leer pr;
+                                acum <- acum + fre * pr;
+                                Escribir " El total a pagar es ", acum;
+                                Escribir "Gracias por la compra";
+                                
+                            3: 
+                                Limpiar Pantalla;
+                                Escribir "Bizcocho de Vainilla....($ 5000 por porcion)";
+                                Escribir "Cantidad de porciones";
+                                Leer pr;
+                                acum <- acum +  vai  * pr;
+                                Escribir " El total a pagar es ", acum;
+                                Escribir "Gracias por la compra";
+                                
+                                
+                            De Otro Modo:
+                                Limpiar Pantalla;
+                                Escribir "opcion invalida";
+
+                        FinSegun
+                        
+                        Escribir " " ;
+                        Escribir "==========================================";
+                        Escribir " Ingresa el monto de la venta";
+                        Leer mon;
+                        Si mon = 1 Entonces
+                            bchoc <- bchoc + mon;
+                        SiNo
+                            si mon = 2 Entonces
+                                fre <- fre + mon;
+                            FinSi
+                            si mon = 3 Entonces
+                                vai <- vai + mon;
+                            FinSi
+                        FinSi
+	
+                        Limpiar Pantalla;
+                        Escribir "Ingrese la cantidad de productos facturados en el dia"; 
+                        Escribir"(Bizcocho de Chocolate)";
+                        Leer cant;
+                        Escribir " Ingrese el valor unitario del producto (6.000)";
+                        Leer precio;
+                        total1<- cant * precio;
+                        
+                        Escribir "El monto total de dia de ventas es $ ", total1;
+                        
+                        Limpiar Pantalla;
+                        Escribir "Ingrese la cantidad de productos facturados en el dia";
+                        Escribir "(Bizcocho Relleno de fresa)";
+                        Leer cant;
+                        Escribir " Ingrese el valor unitario del producto (8.000)";
+                        Leer precio;
+                        total2<- cant * precio;
+                        
+                        Escribir "El monto total de dia de ventas es $ ", total2;
+	
+                        Limpiar Pantalla;
+                        Escribir "Ingrese la cantidad de productos facturados en el dia";
+                        Escribir "(Bizcocho vainilla)";
+                        Leer cant;
+                        Escribir " Ingrese el valor unitario del producto (5.000)";
+                        Leer precio;
+                        total3<- cant * precio;
+                        
+                        Escribir "El monto total de dia de ventas es $ ", total3;
+                        
+                        Limpiar Pantalla;
+
+                        total_ventas <- total1 + total2 + total3;
+                        Escribir "El total de las ventas es ",total_ventas  ;
+                        
+                        
+                    FinProceso
+                                            
+                </code>
+    
+            </pre>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller9" class="taller9">
+        <h2>Taller 9</h2>
+        <p>El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes
+            figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los
+            valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de
+            un rectángulo, triángulo o trapecio.
+            No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.
+        </p>
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Figuras
+                        Definir opc, base, altura Como Entero;
+                        Definir baseM, bmenor Como Entero;
+                        Definir tri, rect, trap Como Real; 
+                        
+                        Escribir "Por favor ingrese una opcion" ;
+                        Escribir " 1. Calcular area del triangulo";
+                        Escribir " 2. Calcular area del rectangulo";
+                        Escribir " 3. Calcular area del Trapecio";
+                        Leer opc;
+                        
+                        Segun opc Hacer
+                            1:
+                                Escribir "Area del Triangulo";
+                                Escribir " Ingrese la base";
+                                Leer base;
+                                Escribir "Ingrese la altura";
+                                Leer altura;
+                                tri <- (base * altura) / 2;
+                                
+                                Escribir "El area es:", tri;
+                                
+                            2:
+                                Escribir "Area del Rectangulo";
+                                Escribir " Ingrese la base";
+                                Leer base;
+                                Escribir "Ingrese la altura";
+                                Leer altura;
+                                rect <- (base * altura);
+                                Escribir "El area es:", rect;
+                                Escribir "Area del Rectangulo";
+                            3:
+                                Escribir "Area del Trapecio";
+                                Escribir " Ingrese la base Mayor";
+                                Leer baseM;
+                                Escribir "Ingrese la base menor";
+                                Leer bmenor;
+                                Escribir "Ingrese la altura";
+                                Leer altura;
+                                trap <- (baseM + bmenor) / 2 *  altura;
+                                Escribir "El area es:", trap;
+                                
+                            De Otro Modo:
+                                Escribir " Opcion invalida";
+                        FinSegun
+                    FinProceso
+
+        
+                     
+                </code>
+    
+            </pre>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller10" class="taller10">
+        <h2>Taller 10</h2>
+        <p>El banco "Su banco fiel" es un banco que inicia sus actividades financieras y
+            necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta
+            tenga los atributos titular y cantidad. Para cada cliente las cuentas
+            permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores
+            negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.
+        </p>
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Banco_Fiel
+                        Definir saldo, res, reti Como Real;
+                        Definir depos Como Real;
+                        Definir nombre,cuenta Como Caracter;
+                        
+                        Escribir "===== Su Banco Fiel ========";
+                        Escribir " ";
+                        saldo <- 100000;
+                        Escribir "Nombre del Titular de la cuenta";
+                        Leer nombre;
+                        Escribir " Ingrese el numero de la cuenta";
+                        Leer cuenta;
+
+                        Escribir "1. Consultar saldo";
+                        Escribir "2. Ingresar saldo";
+                        Escribir "3. Retirar saldo";
+                        leer res;
+	
+                        Segun res Hacer
+                                1:
+                                    Escribir " Tu saldo actual es de ", saldo;
+                                    
+                                2:
+                                    Escribir " Ingresa la cantidad a depositar";
+                                    Leer depos;
+                                    saldo <- saldo + depos;
+                                    Escribir " Tu saldo actual es de ", saldo;
+                                3:
+                                    Escribir "Ingresa la cantidad a retirar";
+                                    Leer reti;
+                                    Si reti > saldo Entonces
+                                        Escribir "La cantidad supera el saldo";
+                                        Escribir " Tu saldo actual es de ", saldo;
+                                    SiNo
+                                        saldo <- saldo - reti;
+                                        Escribir " Tu saldo actual es de ", saldo;
+                                    FinSi
+                                De Otro Modo:
+                                    Escribir " Opcion Invalida";
+                        FinSegun
+                            
+                    FinProceso
+
+                  
+
+        
+                     
+                </code>
+    
+            </pre>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="video" class="video">
+        <div class="titulo-video">
+            <h2>Video Condicionales/h2>
+        </div>
+        <video class="vid" width="500" height="500" controls>
+            <source src="/video/Pseint Condicionales.mp4" type="video/mp4">
+        </video>
+
+    </section>
+        <!-- F O O T E R-->
+        <footer>
+            <h5> Creado por Suyin Orihuen</h5>
+    
+            <div class="redes">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+                <a href=https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+    
+    
+            </div>
+        </footer>
+    
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/estilo2.css">
+    <title>Java Variables e Impresion</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <a href="#">Suyin</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#taller1">Taller 1</a></li>
+                    <li><a href="java.html">ATRÁS</a></li>
+                    <li><a href="index.html">PAGINA PRINCIPAL</a></li>
+    
+    
+    
+    
+    
+                </ul>
+            </nav>
+    
+        </header>
+    
+    </div>
+    <section id="inicio1" class="inicio1">
+        <div class="contenido">
+            <h1>Taller Java: Varibles e Impresion</h1>
+    
+        </div>
+    
+    </section>
+    <section id="taller1" class="taller1">
+        <h2>Taller 1</h2>
+        <h3 id="h3"> Realizar el Taller #1 de Pseint en Java</h3>
+        <div class="container">
+            <h3>Codigo</h3>
+            <pre>
+                <code class="code">
+                    import java.util.Scanner;
+
+                    public class Main {
+
+
+                        public static void main(String[] arg){ 
+                            
+                            boolean respuesta = true;
+                            int opcion ;
+                            clearScreen();
+
+                            do{
+                                
+                                menu();
+                                opcion = capturarOpcion();
+                                respuesta = evaluarOpcion(opcion);
+
+
+                            }while(respuesta == true);
+
+                        
+                        }
+                        private static void clearScreen(){
+                            System.out.print("\033[H\033[2J");
+                            System.out.flush();
+                        }
+
+                        private static void menu(){
+                            System.out.println("Seleccione una opcion del Taller:");
+                            System.out.println("1. Tema 1: *** Nombre y Apellido ***");
+                            System.out.println("2. Tema 2: *** Edad y Estatura ***");
+                            System.out.println("3. Tema 3: *** Padres ***");
+                            System.out.println("4. Tema 4: *** Un Lugar ***");
+                            System.out.println("5. Tema 5: *** Mi Mascota ***");
+                            System.out.println("0. *** Salir del Taller ****");
+
+                        }
+                        private static int capturarOpcion(){
+                            Scanner sc = new Scanner (System.in);
+                            return sc.nextInt();
+                        }
+                    
+                        
+                        
+                        private static boolean evaluarOpcion(int opcion){
+                            switch(opcion){
+                                case 1:
+                                Tema1 t1 = new Tema1();
+                                t1.Tema();
+                                return true;
+
+                                case 2:
+                                Tema2 t2 = new Tema2();
+
+                                t2.Titulo();
+                                return true;
+
+                                case 3:
+                                Tema3 t3 = new Tema3();
+                                t3.Padres();
+                                return true;
+                                //break;
+
+                                case 4:
+                                Tema4 t4 = new Tema4();
+                                t4.Lugar();
+                                return true;
+
+                                case 5:
+                                    Tema5 t5 = new Tema5();
+                                    t5.Mascota();
+                                    return true;
+
+
+                                case 0:
+                                return false;
+                                //break;<
+                                default:
+                                System.out.println(" Opcion Invalida");
+
+                            }
+                            return true;
+
+
+
+                        }
+                        @Override
+                        public String toString() {
+                            return "Main []";
+                        }
+                    }
+               
+                </code>
+    
+            </pre>
+
+        </div>
+        <section class = "ejercicio">
+            <nav>
+                <a class="nav" href="https://github.com/sorihuen/JavaVariables.git">Ejercicio Completo </a>
+            </nav>
+        </section>
+    
+
+    </section>
+            <!-- F O O T E R-->
+            <footer>
+                <a href="#inicio" class="arriba">
+                    <i class="fa-solid fa-angles-up"></i>
+                </a>
+                <h5> Creado por Suyin Orihuen</h5>
+        
+                <div class="redes">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+                    <a href=https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        
+        
+                </div>
+            </footer>
+
+
+
+
+
+</body>
+</html>

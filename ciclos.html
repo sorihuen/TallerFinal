@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/estilo1.css">
+    <title>Ciclos</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <a href="#">Suyin</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#taller1">Taller 1</a></li>
+                    <li><a href="#taller2">Taller 2</a></li>
+                    <li><a href="#taller3">Taller 3</a></li>
+                    <li><a href="#taller4">Taller 4</a></li>
+                    <li><a href="#taller5">Taller 5</a></li>
+                    <li><a href="pseint.html">ATRÁS</a></li>
+                    <li><a href="index.html">PAGINA PRINCIPAL</a></li>
+
+
+
+
+
+                </ul>
+            </nav>
+
+        </header>
+
+    </div>
+    <section id="inicio" class="inicio">
+        <div class="contenido">
+            <h1>Taller de Ciclos</h1>
+
+        </div>
+
+    </section>
+    <section id="taller1" class="taller1">
+        <h2>Taller 1</h2>
+        <p>
+            Realizar la siguiente figura por medio del ciclo Para</p><br>
+        <img src="/img/img ciclo1.png" alt="">
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Cicl_Para
+                        Definir a, b Como Entero;
+
+                        Para a <-1 Hasta 10 Con Paso 1 Hacer
+                            Para b <- 1 Hasta a Con Paso 1 Hacer
+                                Escribir "*"; sin saltar
+                            FinPara
+                            Escribir "";
+                        FinPara
+                        
+                    FinProceso
+
+
+          
+
+    
+                </code>
+    
+            </pre>
+
+            </div>
+
+    </section>
+    <section id="taller2" class="taller2">
+        <h2>Taller 2</h2>
+        <p> Realizar la siguiente figura por medio del ciclo Mientras - Hacer</p><br>
+        <img src="/img/img ciclo2.png" alt="">
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                        Proceso Act2
+                            Definir j,i,q  Como Entero;
+                            i<- 9;
+                            
+                            Mientras i >= 1 Hacer
+                                j <- 1;
+                                Mientras j <= i  Hacer
+                                    Escribir " " Sin Saltar;
+                                    j <- j + 1;
+                                FinMientras
+                                Para q <- 9 Hasta i Con Paso -1 Hacer
+                                    Escribir "*" Sin Saltar;
+                                FinPara
+                                i <- i-1;
+                                Escribir "  ";
+                            FinMientras
+                            Escribir "  ";
+                            
+                            
+                        FinProceso
+
+       
+                    
+                    </code>
+        
+                </pre>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller3" class="taller3">
+        <h2>Taller 3</h2>
+        <p>Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</p><br>
+        <img src="/img/img ciclo3.png" alt="">
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso arbol
+                        Definir contador, espacios, conespacio, i Como Entero;
+                        Definir tab, signo Como Caracter;
+                        contador <- 0;	
+                        signo <- "*";
+                        espacios <- 15;
+                        conespacio <- 1;
+                        tab <- " ";
+                        Escribir "           Arbol";
+                        Escribir "                 *";
+                        Para i<- 1 Hasta 15 Con Paso 1 Hacer
+                            Mientras  contador <= i Hacer
+                                signo <- Concatenar( signo, "*" );
+                                contador <- contador + 1;
+                            FinMientras
+                            Mientras conespacio <= espacios Hacer
+                                tab <- Concatenar (tab, " ") ;
+                                conespacio <- conespacio + 1;
+                            FinMientras
+                            Escribir tab, signo ;
+                            contador <- contador - 1;
+                            espacios <- espacios - 1;
+                            conespacio <- 1;
+                            tab <- " ";
+                        FinPara
+                        Escribir "                 ***";
+                        Escribir "                 ***";
+                        Escribir "                *****";
+                        Escribir "               *******";
+                        
+                    FinProceso
+
+              
+          
+    
+                </code>
+    
+            </pre>
+
+            </div>
+
+    </section>
+    <section id="taller4" class="taller4">
+        <h2>Taller 4</h2>
+        <p>Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio
+            del ciclo Para; esta debe ser impresa del 1 al 10.
+            Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el
+            siguiente:</p><br>
+        <img src="/img/img ciclo4.png" alt="">
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso tablas
+                        Definir tb, i, res Como Entero;
+                        
+                        Escribir "Ingrese la tabla a mostrar";
+                        Leer tb;
+                        
+                        Para i <- 0  Hasta 10 Con Paso 1 Hacer
+                            res <- tb * i;
+                            Escribir tb, " X ", i, " = ", res;
+                        FinPara
+                        
+                        
+                    FinProceso
+                        
+              
+          
+    
+                </code>
+    
+            </pre>
+
+            </div>
+
+    </section>
+    <section id="taller5" class="taller5">
+        <h2>Taller 5</h2>
+        <p>Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar
+            dicho ciclo.
+        </p><br>
+        <img src="/img/img ciclo5.png" alt="">
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                        Proceso menu
+                            Definir nombre,sp Como Caracter;
+                            Definir opcion Como Entero;
+                            Repetir
+                                Escribir " Menu";
+                                Escribir "1.Captura nombre";	
+                                Escribir "2. Saludar Persona" ;
+                                Escribir "3. Salir del sistema";
+                                Escribir "Elija una opcion";
+                                Leer opcion;
+                                Segun opcion Hacer
+                                    1:
+                                        Limpiar Pantalla;
+                                        Escribir "Captura nombre";
+                                        Leer nombre;
+                                        
+                                    2: Limpiar Pantalla;
+                                        Escribir "Saludar Persona";
+                                        Leer sp;
+                                    3:
+                                        Limpiar Pantalla;
+                                        Escribir " ";
+                                        Escribir "¡Adios!";
+                                    De Otro Modo:
+                                        Escribir "opcion invalida";
+                                FinSegun
+                                
+                            Hasta Que (opcion = 3)
+                        
+                        FinProceso
+
+                    </code>
+                 
+                          
+        
+                </pre>
+
+            </div>
+        </div>
+        <nav>
+            <a class="siguente" href="ciclos2.html">Continuar...Ejercicios(6 al 8) </a>
+        </nav>
+
+    </section>
+
+    <!-- F O O T E R-->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <h5> Creado por Suyin Orihuen</h5>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href=https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

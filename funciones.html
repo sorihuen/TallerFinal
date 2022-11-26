@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/estilo1.css">
+    <title>Funciones: Condicionales</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <a href="#">Suyin</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#taller1">Punto 1</a></li>
+                    <li><a href="#taller2">Punto 2</a></li>
+                    <li><a href="#taller3">Punto 3</a></li>
+                    <li><a href="#taller4">Punto 4</a></li>
+                    <li><a href="#taller5">Punto 5</a></li>
+                    <li><a href="funCiclos.html">Funciones Ciclos</a>
+                    <li><a href="pseint.html">Pseint</a></li>
+                    <li><a href="index.html">PAGINA PRINCIPAL</a></li>
+
+
+
+
+
+                </ul>
+            </nav>
+
+        </header>
+
+    </div>
+    <section id="inicio" class="inicio">
+        <div class="contenido">
+            <h1>Taller de Funciones</h1>
+            <p> Condicionales</p>
+
+        </div>
+
+    </section>
+    <section id="taller1" class="taller1">
+        <h2>Taller 1</h2>
+        <p>Organizar todos los puntos del taller de condionales en modo funciones:</p>
+        <h3 id="h3">Punto 1</h3>
+        <p>Realizar un programa en el cual se solicite la edad de una persona.
+            Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p>
+        <div class="container">
+            <h3>Codigo</h3>
+            <pre>
+                <code class="code">
+                    SubProceso numEdad <-MayorEdad ( )
+                        Definir  numEdad Como Entero;
+                        Escribir "Cuantos años tienes?";
+                        Leer numedad;
+                        Si numedad >= 18 Entonces
+                            Escribir " Usted es mayor de edad";
+                        SiNo
+                            Escribir "Usted es menor de edad";
+                            
+                        FinSi
+                        
+                    FinSubProceso
+                
+                    Proceso Activ1
+                        Definir edad Como Entero;
+                        edad <- MayorEdad ();
+                        
+                    FinProceso
+                    
+                
+               
+                </code>
+    
+            </pre>
+
+        </div>
+
+    </section>
+    <section id="taller2" class="taller2">
+        <h3 id="h3">Punto 2</h3>
+        <p>Realizar un programa en el cual se solicite la edad de una persona.
+            Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p>
+        <div class="container">
+            <h3>Codigo</h3>
+            <pre>
+                <code class="code">
+                    SubProceso numEdad <- MenorEdad ()
+                    Definir numEdad Como Entero;
+                    Escribir "Cuantos años tienes?";
+                    Leer numedad;
+                    
+                    Si numedad < 18 Entonces
+                        Escribir " Usted aun es un niño (a) ";
+                    Sino 
+                        Escribir "La edad no corresponde";
+                        
+                    FinSi
+                    
+                    
+                FinSubProceso
+                
+                Proceso Activ2
+                    
+                    Definir edad Como Entero;
+                    
+                    edad <- MenorEdad; 
+                    
+                    
+                
+                FinProceso
+                
+               
+                </code>
+    
+            </pre>
+
+        </div>
+
+    </section>
+    <section id="taller3" class="taller3">
+        <h3 id="h3">Punto 3</h3>
+        <p>
+            Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es
+            mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad,
+            por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá
+            imprimirse el siguiente mensaje:
+            [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a
+            su casa.
+        </p>
+        <div class="container">
+            <h3>Codigo</h3>
+            <pre>
+                <code class="code">
+                    SubProceso dato <- captura (mensaje)
+                        Definir dato Como Caracter;
+                        
+                        Escribir mensaje;
+                        Leer dato;
+                    FinSubProceso
+
+                    SubProceso imprimirPersona ( datos)
+                        Escribir datos[0];
+                        Si ConvertirANumero(datos[1]) >= 18 Entonces
+                            Escribir " Usted es mayor de edad";
+                            Escribir " por lo tanto puede entrar a la fiesta";
+                            
+                        SiNo
+                            Escribir " Usted es menor de edad";
+                            Escribir " por lo tanto, no puede entrar en la fiesta";
+                            Escribir " por favor devuelváse a su casa";
+                            
+                            
+                        FinSi
+                        
+                    FinSubProceso
+
+                    Proceso Activ3
+                        Definir persona Como Caracter;
+                        Dimension persona[2];
+                        
+                        persona[0] <- captura("Cual es su nombre y apellido");
+                        persona[1] <- captura("Cual es su edad");
+                        
+                        imprimirPersona(persona) ;
+                        
+                    FinProceso
+
+                
+               
+                </code>
+    
+            </pre>
+
+        </div>
+
+    </section>
+    <section id="taller4" class="taller4">
+        <h3 id="h3">Punto 4</h3>
+        <p>
+            La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir,
+            requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios.
+            Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir
+            película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños
+            u otra novedad sobre la película.
+        </p>
+        <div class="container">
+            <h3>Codigo</h3>
+            <pre>
+                <code class="code">
+                    SubProceso usuario <- dato(mensaje)
+                        Definir usuario Como Caracter;
+                        Escribir mensaje;
+                        Leer usuario;
+                    FinSubProceso
+
+                    SubProceso peliculas <- opcion()
+                        Definir opc Como Entero;
+                        Definir ob_rc Como Caracter;
+                            Escribir "Seleccione una Pelicula";
+                            Escribir " 1. Titanic";
+                            Escribir " 2. La vida es Bella";
+                            Escribir " 3. Pixeles";
+                            Leer opc;
+                            Segun opc Hacer
+                                1:
+                                    
+                                    Escribir " Disponible";
+                                    Escribir " Reseña: es una película estadounidense de 1997";
+                                    Escribir " Dramática y de catástrofe, dirigida y escrita por James Cameron" ;
+                                    Escribir "Observaciones y recomendaciones";
+                                    Leer ob_rc;
+                                    
+                                2:
+                                    Escribir " Disponible";
+                                    Escribir " Reseña:es una película italiana dramática de 1997";
+                                    Escribir " Escrita, dirigida y protagonizada por Roberto Benigni";
+                                    Escribir "Observaciones y recomendaciones";
+                                    Leer ob_rc;
+                                    
+                                3:
+                                    Escribir " Disponible";
+                                    Escribir " Reseña:es una película estadounidense en 3D, imagen real y animación";
+                                    Escribir " Producida por Columbia Pictures";
+                                    Escribir "Observaciones y recomendaciones";
+                                    Leer ob_rc;
+                                    
+                                De Otro Modo:
+                                    Escribir" No se permite esta opcion";
+                            FinSegun
+                        
+                    FinSubProceso
+
+                    Proceso funvideo
+                        Definir per, peli Como Caracter;
+                        Definir peliculas Como Entero;
+                        
+                        Dimension per[2];
+                        Dimension peli[3];
+                        
+                        per[0] <- dato("Registre su nombre completo");
+                        per[1] <- dato("Desea alquilar una pelicula");
+                        
+                        peliculas <- opcion;
+                    FinProceso
+                
+               
+                </code>
+    
+            </pre>
+
+        </div>
+
+    </section>
+    <section id="taller5" class="taller5">
+        <h3 id="h3">Punto 5</h3>
+        <p>
+            La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder
+            facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que
+            deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las
+            opciones de compra de producto,
+            consulta de precios por producto y devoluciones en caso de que se presenten.
+        </p><br>
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                        SubProceso dato <- productos()
+	
+                            Definir opcion Como Entero;
+                            Definir dev, com, rps Como Caracter;
+                            rps <- "si";
+                            Escribir "Seleccione";
+                            Escribir "1.Productos para la Salud";
+                            Escribir "2.Cuidado personal";
+                            Escribir "3.Maternidad";
+                            Escribir "4.Cambios o devoluciones";
+                            Leer opcion;
+                            Segun opcion Hacer
+                                1:
+                                    Escribir " Entereogermina plus";
+                                    Escribir " caja de 5 ampollas bebibles";
+                                    Escribir " Precio: $ 68.300" ;
+                                    Escribir "¿Desea agregarlo?";
+                                    Leer com ;
+                                    Si com = rps Entonces
+                                        Escribir " Agregado a su carrito de compra";
+                                    SiNo
+                                        Escribir " Desea agregar algun comentario del producto?";
+                                        Leer dev ;
+                                        Escribir " Gracias por sus comentarios";
+                                    FinSi
+                                2:
+                                    Escribir " Limpiador facial Ponds 200 ml " ;
+                                    Escribir " Precio: $ 25.200" ;
+                                    Escribir "¿Desea agregarlo?";
+                                    Leer com ;
+                                    Si com = rps Entonces
+                                        Escribir " Agregado a su carrito de compra";
+                                    SiNo
+                                        Escribir " Desea agregar algun comentario del producto?";
+                                        Leer dev ;
+                                        Escribir " Gracias por sus comentarios";
+                                    FinSi
+                                    
+                                3:
+                                    Escribir " Pañal Pequeñin Extraproteccion" ;
+                                    Escribir " Talla 3 Paquete de 30 Unidades";
+                                    Escribir " Precio $ 19.900 ";
+                                    Escribir "¿Desea agregarlo?";
+                                    Leer com ;
+                                    Si com = rps Entonces
+                                        Escribir " Agregado a su carrito de compra";
+                                    SiNo
+                                        Escribir " Desea agregar algun comentario del producto?";
+                                        Leer dev ;
+                                        Escribir " Gracias por sus comentarios";
+                                    FinSi
+                                4:
+                                    Escribir " Agregue el producto que desea devolver" ;
+                                    Leer dev;
+                                    Escribir "Cual producto va a llevar como cambio";
+                                    Leer dev;
+                                    Escribir " Gracias por su compra disculpe las molestias generadas";
+                                    
+                                De Otro Modo:
+                                    Escribir " opcion no valida ";
+                            FinSegun
+                            
+                        FinSubProceso
+
+                        Proceso Farmacia
+                            
+                            definir dato Como Entero;
+                            
+                            dato <- productos();
+                        FinProceso
+
+                       
+                    </code>
+
+                </pre>
+
+            </div>
+        </div>
+        <nav>
+            <a class="siguente" href="funCondicional.html">Continuar...Ejercicios(6 al 10)</a>
+        </nav>
+
+    </section>
+      <!-- F O O T E R-->
+      <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <h5> Creado por Suyin Orihuen</h5>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href=https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+
+
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

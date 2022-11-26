@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/estilo1.css">
+    <title>Arreglos</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <a href="#">Suyin</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#taller1">Taller 1</a></li>
+                    <li><a href="#taller2">Taller 2</a></li>
+                    <li><a href="#taller3">Taller 3</a></li>
+                    <li><a href="#taller4">Taller 4</a></li>
+                    <li><a href="#taller5">Taller 5</a></li>
+                    <li><a href="#video">Ver Video</a></li>
+                    <li><a href="pseint.html">ATRÁS</a></li>
+                    <li><a href="index.html">PAGINA PRINCIPAL</a></li>
+
+
+
+
+
+                </ul>
+            </nav>
+
+        </header>
+
+    </div>
+    <section id="inicio" class="inicio">
+        <div class="contenido">
+            <h1>Taller de Arreglos</h1>
+
+        </div>
+
+    </section>
+    <section id="taller1" class="taller1">
+        <h2>Taller 1</h2>
+        <p>
+            Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de
+            recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de
+            la siguiente manera:
+            [0] = 55,
+            [1] = 99,
+            [2] = 11,
+            [3] = 56,
+            [4] = 69.
+        </p><br>
+        <div class="container">
+            <div class="izquierdo">
+                <h3>Codigo</h3>
+                <pre>
+                <code class="code">
+                    Proceso Act1_Vector
+                        Definir v, indice como Entero;
+                        Dimension v[5];
+                        v[0] <- 55;
+                        v[1] <- 99;
+                        v[2] <- 11;
+                        v[3] <- 56;
+                        v[4] <- 69;
+                        Para indice <- 0 Hasta 4  Con Paso 1 Hacer
+                            Escribir v[indice];
+                        FinPara
+                        
+	                FinProceso
+
+        
+                </code>
+    
+            </pre>
+
+            </div>
+
+    </section>
+    <section id="taller2" class="taller2">
+        <h2>Taller 2</h2>
+        <p> Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre
+            1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al
+            que se usó para llenarse e imprimir los números pares e impares. Ejemplo<br>
+            Números pares: 2, 4, 6, 8, 10<br>
+            Números impares: 1, 3, 5, 7, 9
+        </p><br>
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                        Proceso Actv2Impar_Par
+                            Definir num, i, x, par, impar Como Entero;
+                            Dimension num[2,20];
+                            Para i<- 0 Hasta 0 Con Paso 1 Hacer
+                                Escribir "Numeros Pares:", " ", Sin Saltar;
+                                Para x<- 0 Hasta 19 Con Paso 1 Hacer
+                                    num[i,x] <- Aleatorio(0,100);
+                                    Si	num[i,x]  mod 2 = 0  Entonces
+                                        Par <- num[i,x];
+                                        Escribir par, " " Sin Saltar;
+                                    FinSi
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                            
+                            Para i<-1 Hasta 1 Con Paso 1 Hacer
+                                Escribir "Numeros Impares:" , " ", Sin Saltar;
+                                Para x <- 0 Hasta 19 Con Paso 1 Hacer
+                                    num[i,x] <- Aleatorio(0,100);
+                                    Si num[i,x]  mod 2 <> 0  Entonces
+                                        impar <- num[i,x];
+                                        Escribir impar," " Sin Saltar;
+                                    FinSi
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                            Escribir " ";
+                            
+                        FinProceso
+                    </code>
+        
+                </pre>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller3" class="taller3">
+        <h2>Taller 3</h2>
+        <div class="container">
+            <div class="derecho">
+              <p>Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</p>
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                        Proceso Numprimos
+                            Definir x,contador, t ,i, arreglo Como Entero;
+                            Dimension arreglo[1000];
+                            
+                            Para i <- 0 Hasta 999 Con Paso 1 Hacer
+                                arreglo[i] <- Aleatorio(0,1000);
+                            FinPara
+                            Para i <-0 Hasta 999 Con Paso 1 Hacer
+                                x <- 1;
+                                contador <- 0;
+                                Mientras x <= i Hacer
+                                    Si i mod x == 0 Entonces
+                                        contador <- contador + 1;
+                                    FinSi
+                                    x <- X + 1;
+                                FinMientras
+                                Si contador == 2 Entonces
+                                    Escribir " El numero ", arreglo[i], " es primo " Sin Saltar;
+                                    Escribir " ";
+                                FinSi
+                            FinPara
+                            
+                        FinProceso
+                    
+                       
+                       
+                    </code>
+        
+                </pre>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller4" class="taller4">
+        <h2>Taller 4</h2>
+        <p>Dada la siguiente matriz bidimensional, el cual debe de quemar en el código<br>
+            01 02 03 04 05<br>
+            06 07 08 09 10<br>
+            11 12 13 14 15<br>
+            16 17 18 19 20<br>
+        </p>
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                        
+                        Proceso Matriz_20
+                            Definir contador, fila, columna, mat2 Como Entero;
+                            Dimension mat2[4,5];
+                            contador <- 0;
+                            Para fila <-0 Hasta 3 Con Paso 1 Hacer
+                                Para columna <- 0 Hasta 4 Con Paso 1 Hacer
+                                    contador <- contador + 1;
+                                    mat2[fila,columna] <- contador;
+                                    Si contador < 10 Entonces
+                                        Escribir "0" , mat2[fila,columna] , " " Sin Saltar;
+                                    SiNo
+                                        Escribir  mat2[fila,columna], " " Sin Saltar;
+                                    FinSi
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                        FinProceso
+                    
+                
+                       
+                    </code>
+        
+                </pre>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller4" class="taller4">
+        <h2>Taller 4 (Parte b)</h2>
+        <p>Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz
+            bidimensional.<br>
+            01 02 03 04 05<br>
+            10 09 08 07 06<br>
+            11 12 13 14 15<br>
+            20 19 18 17 16<br>
+        </p>
+        <div class="container">
+            <div class="derecho">
+                <h3>Codigo</h3>
+                <pre>
+                    <code class="contenido">
+                        
+                        Proceso Matrizb
+                            Definir columna, fila, mat Como Entero;
+                            Dimension mat[4,5];
+                            mat[0,0] <- 01;mat[0,1] <- 02;mat[0,2] <- 03; mat[0,3] <- 04; mat[0,4] <- 05;
+                            mat[1,0] <- 10;mat[1,1] <- 09;mat[1,2] <- 08; mat[1,3] <- 07; mat[1,4] <- 06;
+                            mat[2,0] <- 11;mat[2,1] <- 12;mat[2,2] <- 13; mat[2,3] <- 14; mat[2,4] <- 15;
+                            mat[3,0] <- 20;mat[3,1] <- 19;mat[3,2] <- 18;;mat[3,3] <- 17; mat[3,4] <- 16;
+
+                            Para fila <- 0 Hasta 3 Con Paso 1 Hacer
+                                Para columna <- 0 Hasta 4 Con Paso 1 Hacer
+                                    Escribir mat[fila,columna], " " ; Sin saltar;
+                                FinPara
+                                Escribir " ";
+                            FinPara
+
+
+                        FinProceso
+
+                    </code>
+        
+                </pre>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="taller5" class="taller5">
+            <h2>Taller 5</h2>
+            <p>Se debe de imprimir el siguiente cuadro</p>
+            <img src="/img/cuadro.png" alt="">
+            <p>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada
+                celda debe estar previamente calculado en una matriz bidimensional
+                la cual cada resultado obedecerá a la fila y columna insertada por el usuario
+            </p>
+            <div class="container">
+                <div class="derecho">
+                    <h3>Codigo</h3>
+                    <pre>
+                        <code class="contenido">
+                            Proceso Cuadro
+	
+                                Definir mat, fila, columna Como Entero;
+                                Dimension mat[11,11];
+                                
+                                Escribir "======================= COLUMNAS =============================";
+                                
+                                Para fila <-0 Hasta 10 Con Paso 1 Hacer
+                                    Para columna <- 0 Hasta 10 Con Paso 1 Hacer
+                                        
+                                        mat[fila,columna]<-(fila +1) * (columna + 1);
+                                    FinPara
+                                    
+                                FinPara
+                                
+                        
+                                Para fila <- 1 Hasta 10 Con Paso 1 Hacer
+                                    Para columna<-1 Hasta 10 Con Paso 1 Hacer
+                                        
+                                        Si fila <> 10 Entonces
+                                            Escribir columna, "X" , fila, "   " Sin Saltar;
+                                        SiNo
+                                            Escribir columna, "X" , fila, "  " Sin Saltar;
+                                        FinSi
+                                        FinPara
+                                        Escribir "";
+                                    FinPara
+                                    Escribir "=============================================================";
+                                    
+                                    Escribir "Ingrese la Posicion de la fila";
+                                    Leer fila;
+                                    Escribir "Ingrese la posicion de la columna";
+                                    Leer columna;
+                                    Escribir "Respuesta : ", mat[fila-1,columna-1];
+                            FinProceso
+                        
+                         
+                        </code>
+            
+                    </pre>
+
+                </div>
+
+            </div>
+
+    </section>
+    <section id="video" class="video">
+        <div class="titulo-video">
+            <h2>Video Matrices</h2>
+        </div>
+        <video class="vid" width="500" height="500" controls>
+            <source src="/video/Pseint Matrices.mp4" type="video/mp4">
+        </video>
+
+    </section>
+     <!-- F O O T E R-->
+     <footer>
+        <h5> Creado por Suyin Orihuen</h5>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href=https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+
+
+        </div>
+    </footer>
+
+  
+
+
+</body>
+
+</html>
